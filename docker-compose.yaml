@@ -9,8 +9,6 @@ services:
     container_name: app
     entrypoint: dockerize -wait tcp://mysql:3306 -timeout 20s docker-entrypoint.sh node index.js
     tty: true
-    volumes:
-      - ./app:/usr/src/app
     networks:
       - node-net
     depends_on:
